@@ -1,34 +1,36 @@
-
 #include <stdio.h>
 #include <string.h>
-
-int main() {
-    char arr[32];
-    char str[32];
-    int bits[32];
-    char result[32];
+/*
+输入：
+123456789012345678901234567890123
+输出：
+"p*+,)&'ebst*+,)&'ebst*+,)&'eb&r
+*/
+int main() 
+{
+    char arr[32] = {'\0'};
+    char str[500] = {'\0'};
+    int bits[32] = {0};
+    char result[32] = {'\0'};
     
-    scanf("%s", &arr[32]);
     char input;
     int j = 0;
     
-    for(int i = 0; i < 32; i++){
+    for (int i = 0; i < 32; i++) {
         arr[i] = 0;
     }
     
     while (scanf("%c", &input) != EOF) {
-        char str[2] = "\0";
-        str[0] = input;
-        if (strcmp(str, "\n")){
-            break;
-        }else if(j >= 32){
+        char string[2] = {'\0'};
+        string[0] = input;
+        if (!strcmp(string, "\n\0")) {
             break;
         }
-        arr[j] = (int)(input);
+        str[j] = (int)(input);
         j++;
     }
     
-    for (int i = 0; i < 32; i++) {
+    for (int i = 0; i < j; i++) {
         arr[(i+1) % 32] = arr[(i+1) % 32] + (int)(str[i]);
     }
     
