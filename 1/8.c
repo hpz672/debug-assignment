@@ -1,10 +1,18 @@
 #include <stdio.h>
 #include <math.h>
 #define EPSILON 1e-7
+/*
+55 9
+-0.1636
 
+-22 4
+0.1818 
+*/ 
 double bisection(int p, int q, double (*func)(int, int, double));
 double f(int p, int q, double x);
-int main() {
+
+int main() 
+{
     int p;
     int q;
     scanf("%d%d", &p, &q);
@@ -12,7 +20,8 @@ int main() {
     return 0;
 }
 
-double bisection(int p, int q, double (*func)(int, int, double)) {
+double bisection(int p, int q, double (*func)(int, int, double)) 
+{
     double a = -20.0;
     double b = 20.0;
     double x = 0.0;
@@ -24,16 +33,17 @@ double bisection(int p, int q, double (*func)(int, int, double)) {
         x = (a + b) / 2.0;
         fx = f(p, q, x);
         
-        if (fa > 0 && fx > 0) {
+        if (fa * fx > 0) {
             a = x;
-        } else{
+        } else {
             b = x;
         }
-    } while (fx >= EPSILON);
+    } while (fabs(fx) >= EPSILON);
     
     return x;
 }
 
-double f(int p, int q, double x) {
+double f(int p, int q, double x) 
+{
     return p * x + q;
 }
