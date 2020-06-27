@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+/*
+input:9 1 1
+output:1 2 3 4 5 6 7 8 9
+input:20 7 3
+output:9 12 15 18 1 4 7 11 16 20 5 10 17 3 13 2 14 8 19 6
+*/ 
 typedef struct node {
     int data;
     struct node *next;
@@ -8,7 +14,8 @@ typedef struct node {
 Node *circle_create(int n);
 void count_off(Node *head, int n, int k, int m);
 
-int main() {
+int main() 
+{
     int n, k, m;
     scanf("%d%d%d", &n, &k, &m);
     Node *head = circle_create(n);
@@ -16,16 +23,15 @@ int main() {
     return 0;
 }
 
-Node *circle_create(int n) {
+Node *circle_create(int n) 
+{
     Node *temp, *new_node, *head;
     int i;
 
-    // 创建第一个链表节点并加数据
     temp = (Node *) malloc(sizeof(Node));
     head = temp;
     head->data = 1;
 
-    // 创建第 2 到第 n 个链表节点并加数据
     for(i = 2; i <= n; i++) {
         new_node = (Node *) malloc(sizeof(Node));
         new_node->data = i;
@@ -33,33 +39,38 @@ Node *circle_create(int n) {
         temp = new_node;
     }
 
-    // 最后一个节点指向头部构成循环链表
     temp->next = head;
-
     return head;
 }
 
-void count_off(Node *head, int n, int k, int m) {
+void count_off(Node *head, int n, int k, int m) 
+{
     Node *p=head;
     Node *q;
-    if(p!=NULL){
-    	while(p->data!=k){
-        	p=p->next;
+    if (p != NULL) {
+    	while (p->data != k) {
+        	p = p->next;
         }
-        while(p!=p->next){
+        while (p != p->next) {
+            if(m == 1) {
+        		printf("%d ",p->data);
+        		p = p->next;
+        		if(p->next->data == 1)
+        		break;
+        		continue;
+			}
             int j=1;
-            while(j<m-1){
-            	p=p->next;
+            while (j < m - 1) {
+            	p = p->next;
             	++j;
 			}
-            q=p->next;
-            printf("%d ",q->data);
-            p->next=q->next;
+            q = p->next;
+            printf("%d ", q->data);
+            p->next = q->next;
             free(q);
-            q=NULL;
-            p=p->next;
+            q = NULL;
+            p = p->next;
         }
         printf("%d",p->data);
     }
-    return;
 }
