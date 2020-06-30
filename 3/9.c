@@ -40,7 +40,7 @@ int main()
         }
     }
     if (times <= m * n) {
-        for (i = 0; i < 6; i++) {
+        for (i = 0; i < m || i < n; i++) {
             if (orientation % 4 == 0) {
                 while (matrixpass[mIndex][nIndex] == 0 && nIndex <= l - 1) {
                     printf("%d", matrix[mIndex][nIndex]);
@@ -49,7 +49,10 @@ int main()
                     times++;
                     if (times != m * n) {
                         printf(" ");
-                    }
+                    } 
+                    else {
+                    	return 0;
+					}
                 }
                 orientation++;
                 mIndex++;
@@ -64,6 +67,9 @@ int main()
                     if (times != m * n) {
                         printf(" ");
                     }
+					else {
+                    	return 0;
+					} 
                 }
                 orientation++;
                 mIndex--;
@@ -78,6 +84,9 @@ int main()
                     if (times != m * n) {
                         printf(" ");
                     }
+                    else {
+                    	return 0;
+					}
                 }
                 orientation++;
                 mIndex--;
@@ -92,6 +101,9 @@ int main()
                     if (times != m * n) {
                         printf(" ");
                     }
+					else {
+                    	return 0;
+					} 
                 }
                 orientation++;
                 mIndex++;
