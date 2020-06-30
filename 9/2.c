@@ -4,7 +4,7 @@ int main()
 {
     int N; 
     scanf("%d", &N);
-    int step[50];
+    int step[100];
     int i;
     step[0] = 0;
     step[1] = 0;

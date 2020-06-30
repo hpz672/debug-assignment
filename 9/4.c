@@ -4,7 +4,7 @@ int main()
 {
     int n, i;
     int sum = 0;
-    int arr[50];
+    int arr[100];
     scanf("%d", &n);
     arr[0] = 0;
     arr[1] = 0;
