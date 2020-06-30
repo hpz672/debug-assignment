@@ -17,8 +17,8 @@ int main()
         for (i = 0; i < m - 1; i++) {
             if (strcmp(name[i], name[i + 1]) > 0) {
                 for (l = 0; l < 20; l++) {
-					swap(&name[i][l], &name[i + 1][l]);
- 				}
+                    swap(&name[i][l], &name[i + 1][l]);
+                }
             }
         }
     }
