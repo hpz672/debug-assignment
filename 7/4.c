@@ -11,7 +11,7 @@ int main()
             printf("YES");
         } else { 
             printf("NO");
-		} 
+        } 
     } else if (b != 2) { 
         if (c > 30) { 
             printf("NO");
