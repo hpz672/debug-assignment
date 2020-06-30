@@ -30,8 +30,7 @@ int main()
     for (strcpy(largest, name[0]), i = 1; i < n; i++)
         if (strlen(largest) < strlen(name[i]))
             strcpy(largest, name[i]);
-    
+	
     printf("%s", largest);
-    
     return 0;
 }
