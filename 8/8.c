@@ -20,8 +20,12 @@ int main()
     char largest[101] = {'\0'};
     
     for (i = 0; i < n; i++)
-        for(j = 0; scanf("%c", &name[i][j]) != EOF && name[i][j] != '\n'; j++);
-        	name[i][j]='\0';
+        for(j = 0; scanf("%c", &name[i][j]) != EOF; j++) {
+        	if(name[i][j] == '\n') {
+        		name[i][j]='\0';
+        		break;
+			}	
+		} 	
         	
     for (strcpy(largest, name[0]), i = 1; i < n; i++)
         if (strlen(largest) < strlen(name[i]))
