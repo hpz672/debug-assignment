@@ -8,7 +8,7 @@
 */
 int main() 
 {
-    char arr[32] = {'\0'};
+    int arr[32] = {'\0'};
     char str[500] = {'\0'};
     int bits[32] = {0};
     char result[32] = {'\0'};
