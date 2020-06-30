@@ -24,7 +24,7 @@ int main()
             if(name[i][j] == '\n') {
         	name[i][j]='\0';
         	break;
-		}	
+	    }	
 	} 	
         	
     for (strcpy(largest, name[0]), i = 1; i < n; i++)
