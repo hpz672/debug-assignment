@@ -28,7 +28,7 @@ int main()
                         printf("NO");
                     }
                 } else {
-                	if (day <= 29 && day >= 1) {
+                    if (day <= 29 && day >= 1) {
                         printf("YES");
                     } else {
                         printf("NO");
