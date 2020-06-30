@@ -25,7 +25,7 @@ int main()
 		for (k = 0; k < n; k++) {
 			scanf("%d", &matrix_a[i][k]);
 		}	
-	}	
+	}
 		
 	for (k = 0; k < n; k++) {
 		for (i = 0; i < m; i++) {
@@ -55,5 +55,6 @@ int main()
 			}
 		}
 	}
+	
 	return 0;
 }
