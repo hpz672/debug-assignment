@@ -10,8 +10,8 @@
  {
     char s[33] = {'\0'} ;//要输出的字符串数组
     int bits[32] = {0};
-	int arr[32] = {0};
-	int i;
+    int arr[32] = {0};
+    int i;
     int j;
     int m = strlen(k);
     for (i = 1; i <= m; i++) {
