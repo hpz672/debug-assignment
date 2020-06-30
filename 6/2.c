@@ -40,10 +40,10 @@ int main()
         if (!strcmp(temp, "-r") && r == 1) {
             r--;
         } 
-		if (!strcmp(temp, "+w") && w == 0) {
+        if (!strcmp(temp, "+w") && w == 0) {
             w++;
         } 
-		if (!strcmp(temp, "-w") && w == 1) {
+        if (!strcmp(temp, "-w") && w == 1) {
             w--;
         }
     }
