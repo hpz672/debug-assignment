@@ -12,7 +12,10 @@ int main()
 {
     int y, m, d;
     scanf("%d-%d-%d", &y, &m, &d);
-    
+    if (m <= 0 || m >= 13) {
+        printf("NO");
+        return 0;
+    }
     if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) {
         if (d <= 31) {
             printf("YES");
