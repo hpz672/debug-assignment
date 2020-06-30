@@ -38,7 +38,7 @@ int main()
     
     for (mIndex = 0; mIndex < m; mIndex ++) {
         for (nIndex = 0; nIndex < m; nIndex ++) {
-            for (j = 0; j < n + 1; j ++) {
+            for (j = 0; j < n; j ++) {
                 matrix_result[mIndex][nIndex] += matrix_a[mIndex][j] * matrix_b[j][nIndex];
             }  
         }
