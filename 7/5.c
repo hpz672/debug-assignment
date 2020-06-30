@@ -12,29 +12,29 @@ int main()
                 printf("YES");
             } else {
             	printf("NO");
-			}
+            }
         } else if (month == 4 || month == 6 || month == 9 || month == 11) {
             if (day >= 1 && day <= 30) {
                 printf("YES");
             } else {
             	printf("NO");
-			}
+            }
         } else if ((year % 100 != 0 && year % 4 == 0) || year % 400 == 0) {
             if (day >= 1 && day <= 29) {
                 printf("YES");
             } else {
             	printf("NO"); 
-			}
+            }
 		} else {
             if (day >= 1 && day <= 28) {
                 printf("YES");
             } else {
                 printf("NO");
-			}
+            }
         } 
-	} else {
+    } else {
         printf("NO");	
-	}
+    }
     
     return 0;
 }
