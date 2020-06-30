@@ -30,7 +30,7 @@ int main()
         for (j = 0; j < m; j++) {
             for (digit = 0; digit < n; digit++) {
             	sum[i][j] = sum[i][j] + matrix_a[i][digit] * matrix_b[digit][j];
-			}    	
+            }    	
         }
     }
     for (i = 0; i < m; i++) {
