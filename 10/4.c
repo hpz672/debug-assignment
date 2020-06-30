@@ -13,7 +13,7 @@ int main()
             }
         }
         if (a == digit) {
-        	printf("%d\n",digit);
+            printf("%d\n",digit);
     	}
     }
     return 0;
