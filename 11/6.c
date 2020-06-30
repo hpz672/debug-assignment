@@ -8,7 +8,7 @@ output:
 */
 int main() 
 {
-    char arr[32];
+    int arr[32] = {0};
     char str[32] = {'\0'};
     int bits[32] = {0};
     char result[32] = {'\0'};
@@ -37,6 +37,6 @@ int main()
     for (int i = 0; i < 32; i++) {
         printf("%c", result[i]);
     }
-
+    
     return 0;
 }

@@ -8,7 +8,8 @@ output:
 */
 int main() 
 {
-    char str[500] = {'\0'}, fs[33], arr[32]; 
+    char str[500] = {'\0'}, fs[33];
+	int arr[32] = {0}; 
     int bits[32] = {0};
     int i;
     memset(arr, 0, sizeof(arr));

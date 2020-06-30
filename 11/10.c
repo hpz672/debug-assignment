@@ -6,13 +6,12 @@ input:
 output:
 "p*+,)&'ebst*+,)&'ebst*+,)&'eb&r
 */
-const int maxn = 500;
 int main() 
 {
     int i,j,k;
     int arr[32] = {0};
     int bits[32] = {0};
-    char str[maxn] = {'\0'};
+    char str[500] = {'\0'};
     char rstr[32] = {'\0'};
     
     i=0;
