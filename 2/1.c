@@ -6,7 +6,7 @@ int main()
     int matrix_b[10][10] = {0};
     int m = 0;
     int n = 0;
-	scanf("%d %d", &m, &n);
+    scanf("%d %d", &m, &n);
     int i = 0;
     int j = 0;
     int digit = 0;
