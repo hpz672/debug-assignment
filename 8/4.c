@@ -15,8 +15,8 @@ int main()
 {
     int n;
     scanf("%d\n", &n);
-    char name[n][100];
-    char temp[100]={'\0'};
+    char name[1000][200];
+    char temp[200]={'\0'};
 
     for (int i = 0; i < n; i++) {
         gets(name[i]);        

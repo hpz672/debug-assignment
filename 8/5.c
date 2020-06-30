@@ -15,13 +15,13 @@ int main()
 {
     int n;
     scanf("%d\n", &n);
-    char name[n][100] = {'\0'};
+    char name[n][200] = {'\0'};
     
     for (int i = 0; i < n; i++) {
         gets(name[i]);
     }
     
-    char name_max[100] = {'\0'};
+    char name_max[200] = {'\0'};
     strcpy(name_max, name[0]);
 
     for (int i = 1; i < n; i++) {

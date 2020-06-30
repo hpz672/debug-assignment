@@ -15,7 +15,7 @@ int main()
 {
     int n;
     scanf("%d\n", &n);
-    char names[n][101]={'\0'};
+    char names[1000][101]={'\0'};
     char max[101]={'\0'};
     
     for (int i = 0; i < n; i++) {
