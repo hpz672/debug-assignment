@@ -3,7 +3,7 @@
 
 int main() 
 {
-	int matrix_a[10][10] = {0};
+    int matrix_a[10][10] = {0};
     int matrix_b[10][10] = {0};
     int i;
     int j;
@@ -15,16 +15,16 @@ int main()
     
     for (i = 0; i < m; i++) {
         for (j = 0; j < n; j++) {
-        	scanf("%d", &matrix_a[i][j]);
-		}
-	}
+            scanf("%d", &matrix_a[i][j]);
+        }
+    }
             
             
     for (j = 0; j < n; j++) {
         for (i = 0; i < m; i++) {
-        	scanf("%d", &matrix_b[j][i]);
-		}
-	}
+            scanf("%d", &matrix_b[j][i]);
+        }
+    }
             
     int mat[m][m];
     memset(mat, 0, sizeof(int) * m * m);   
@@ -32,7 +32,7 @@ int main()
         for(j = 0; j < m; j++) {
             for(k = 0; k < n; k++) {
             	mat[i][j] = mat[i][j] + matrix_a[i][k] * matrix_b[k][j];	
-			}
+	    }
         }
     }
     for (i = 0; i < m; i++) {
@@ -41,7 +41,7 @@ int main()
                 printf("%d\n", mat[i][j]);
             } else {
                 printf("%d ", mat[i][j]);
-			} 
+	    } 
         }
     }
     return 0;
