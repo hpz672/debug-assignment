@@ -9,7 +9,7 @@ output:31572
 int main()
 {
     int i, N, x;
-    int a[50] = {0};
+    int a[61] = {0};
     
     scanf("%d", &N);
     a[2] = 1;

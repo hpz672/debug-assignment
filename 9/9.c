@@ -11,7 +11,7 @@ int main()
     int n;
     scanf("%d", &n);
 
-    int a[50] = {0};
+    int a[51] = {0};
     if (n == 2) {
         printf("1");
     }

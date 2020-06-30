@@ -10,7 +10,7 @@ int main()
 {
     int N;
     int i;
-    int part[50] = {0};
+    int part[51] = {0};
     part[2] = 1;
     part[3] = 1;
     part[4] = 1;
