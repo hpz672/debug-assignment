@@ -6,9 +6,9 @@ int main()
     int matrix_b[10][10] = {0};
     int m;
     int n;
-	scanf("%d %d", &m, &n);
+    scanf("%d %d", &m, &n);
     int i,j;
-	for (i = 0; i < m; i++) {
+    for (i = 0; i < m; i++) {
         for (j = 0; j < n; j++) {
             scanf("%d", &matrix_a[i][j]);
         }
