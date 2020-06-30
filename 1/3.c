@@ -1,4 +1,4 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <math.h>
 #define EPSILON 1e-7
 

@@ -42,4 +42,4 @@ double bisection(int p, int q, double (*func)(int, int, double))
 double f(int p, int q, double x)
 {
     return p * x + q;
-}e
+}
