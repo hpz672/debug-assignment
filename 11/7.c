@@ -9,7 +9,7 @@ output:
 int main() 
 {
     char str[500] = {'\0'}, fs[33];
-	int arr[32] = {0}; 
+    int arr[32] = {0}; 
     int bits[32] = {0};
     int i;
     memset(arr, 0, sizeof(arr));
@@ -27,7 +27,7 @@ int main()
         bits[i] = arr[31 - i] ^ (arr[i] << 1);
         fs[i] = bits[i] % 85 + 34;
     }
+    
     printf("%s", fs);
-
     return 0;
 }
