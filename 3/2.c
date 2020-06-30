@@ -70,8 +70,8 @@ int main()
         m0--;
         if (m == n && i == k - 1)
     	{
-        	printf("%d", matrix[m/2][n/2]);
-        	break;
+            printf("%d", matrix[m/2][n/2]);
+            break;
     	}
     }
 
