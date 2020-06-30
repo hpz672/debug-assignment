@@ -49,21 +49,21 @@ void count_off(Node *head, int n, int k, int m)
     Node *q;
     if (p != NULL) {
     	while (p->data != k) {
-        	p = p->next;
+            p = p->next;
         }
         while (p != p->next) {
             if(m == 1) {
-        		printf("%d ",p->data);
-        		p = p->next;
-        		if(p->next->data == 1)
-        		break;
-        		continue;
-			}
+                printf("%d ",p->data);
+                p = p->next;
+                if(p->next->data == 1)
+                break;
+                continue;
+            }
             int j=1;
             while (j < m - 1) {
             	p = p->next;
             	++j;
-			}
+            }
             q = p->next;
             printf("%d ", q->data);
             p->next = q->next;
