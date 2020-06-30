@@ -40,19 +40,19 @@ int main()
             }
             break;
         case 0:
-            if(m <= n) {
-        		for (int a = (i / 4); a < (n - i / 4 - fabs(m - n)); a++) {
-                	printf("%d", matrix[m - a - 1][i / 4 - 1]);
-                	counter++;
-                	space(counter, m * n);
-            	}
-			} else {
-				for (int a = (i / 4); a < (n - i / 4 + fabs(m - n)); a++) {
-                	printf("%d", matrix[m - a - 1][i / 4 - 1]);
-                	counter++;
-                	space(counter, m * n);
-            	}
-			}	
+            if (m <= n) {
+                for (int a = (i / 4); a < (n - i / 4 - fabs(m - n)); a++) {
+                    printf("%d", matrix[m - a - 1][i / 4 - 1]);
+                    counter++;
+                    space(counter, m * n);
+                }
+	        } else {
+	            for (int a = (i / 4); a < (n - i / 4 + fabs(m - n)); a++) {
+                    printf("%d", matrix[m - a - 1][i / 4 - 1]);
+                    counter++;
+                    space(counter, m * n);
+                }
+            }	
         }
     }
     return 0;
