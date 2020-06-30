@@ -8,15 +8,15 @@ output:31572
 */ 
 long long int f(int a, int b)
 {
-	int i;
-	long long int sum=1;
-	if (a > b)
-		return 1;
-	else {
-		for (i = a; i <= b; i++)
-			sum *= i;
-	}
-	return sum;
+    int i;
+    long long int sum=1;
+    if (a > b)
+        return 1;
+    else {
+        for (i = a; i <= b; i++)
+            sum *= i;
+    }
+    return sum;
 }
 
 int main()
