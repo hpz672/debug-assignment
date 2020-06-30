@@ -15,8 +15,11 @@ int main()
         if (n == 'x') {
             a[2]=1;
         }
-        
+        if (n == '\n') {
+            break;
+        }
     }
+    
     while (scanf("%c", &n) !=EOF) {
         if (n == '\n') {
             continue;
@@ -44,7 +47,7 @@ int main()
             if (n == 'x' && a[2] == 1) {
                 a[2]=0;
            }  
-       } 
+       }
     }
     int o=a[0] * 2 * 2 + a[1] * 2 + a[2];
     printf("%d", o);
