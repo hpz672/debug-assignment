@@ -14,7 +14,7 @@ int main()
 {
     int i = 0;
     int counter = 0;
-	char temp[1000][4] = {'\0'};
+    char temp[1000][4] = {'\0'};
     char name[4] = {'\0'};
     while (scanf("%s", name) != EOF) {
         strcpy(temp[i], name);
@@ -32,7 +32,7 @@ int main()
     }
     for (int a = 1; a < 1000; a++) { 
     	if (temp[a][0] == '\0') { 
-    		break;
+            break;
     	} else if (temp[a][0] == '+' && temp[a][1] == 'r' && (counter&4) == 0) {
             counter += 4;
         } else if (temp[a][0] == '+' && temp[a][1] == 'w' && (counter&2) == 0) {
