@@ -11,11 +11,12 @@ Bill Ma
 Hello world
 Everybody fighting
 */
-int main() {
+int main() 
+{
     int n;
     scanf("%d\n", &n);
     int i,j,k;
-    char a[100][101]={'0'};
+    char a[100][101] = {'0'};
     char temp[101] = {'0'};
 
     for(i = 0; i < n; i++) {
