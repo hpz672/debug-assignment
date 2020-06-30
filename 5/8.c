@@ -38,7 +38,7 @@ int main()
         }
     }
     for (i = 0; i < 9; i++) {
-        for (j = 0; j <= 9 - i; j++) {
+        for (j = 0; j < 9 - i; j++) {
             if (strcmp(string[j+1], string[j]) < 0) {
                 strcpy(str, string[j+1]);
                 strcpy(string[j+1], string[j]);
@@ -46,10 +46,13 @@ int main()
             }
         }
     }
+    
     for (i = 0; i < 10; i++) {
         for (j = 0; j < 21; j++) {
             if (string[i][j] == '\0') {
-                printf ("\n");
+            	if (i != 9) {
+            		printf ("\n");
+				}
                 break;
             }
             else {

@@ -32,9 +32,9 @@ int main()
     }
     
     for(i = 0; i < 9; i++) {
-        for (j = 0; j <= 9 - i; j++) {
+        for (j = 0; j < 9 - i; j++) {
             if(strcmp(name[j], name[j+1]) > 0) {
-                char temp[10] = {'\0'};
+                char temp[21] = {'\0'};
                 strcpy(temp, name[j]);
                 strcpy(name[j], name[j+1]);
                 strcpy(name[j+1], temp);
