@@ -1,13 +1,22 @@
 #include <stdio.h>
 #include <string.h>
-
+#include <string.h>
+/*
+输入：
+123456789012345678901234567890123
+输出：
+"p*+,)&'ebst*+,)&'ebst*+,)&'eb&r
+*/
 int main() {
     int arr[32] = {0};
-    char input[500];
-    int bits[32];
-    char result[32];
+    char input[500] = {'\0'};
+    int bits[32] = {0};
+    char result[33] = {'\0'};
     int i = 1, j = 0;
-    while (scanf("%c\n", &input[i - 1]) != EOF) {
+    while (scanf("%c", &input[i - 1]) != EOF) {
+        if(input[i - 1] == '\n') {
+           break;
+        }
         arr[i % 32] = arr[i % 32] + (int)input[i - 1];
         i++;
     }

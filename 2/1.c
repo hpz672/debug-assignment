@@ -1,13 +1,15 @@
 #include <stdio.h>
 
-int main() {
-    int matrix_a[10][10];
-    int matrix_b[10][10];
-    int m;
-    int n;
-	scanf("%d%d", &m, &n);
-    int i;
-    int j;
+int main()
+{
+    int matrix_a[10][10] = {0};
+    int matrix_b[10][10] = {0};
+    int m = 0;
+    int n = 0;
+    scanf("%d %d", &m, &n);
+    int i = 0;
+    int j = 0;
+    int digit = 0;
     for (i = 0; i < m; i++) {
         for (j = 0; j < n; j++) {
             scanf("%d", &matrix_a[i][j]);
@@ -21,13 +23,14 @@ int main() {
     int sum[m][m];
     for (i = 0; i < m; i++) {
         for (j = 0; j < m; j++) {
-            sum[m][m] = 0;
+            sum[i][j] = 0;
         }
-    }
+    }   
     for (i = 0; i < m; i++) {
         for (j = 0; j < m; j++) {
-            for (int digit = 0; digit < n; digit++)
-            sum[i][j] = sum[i][j] + matrix_a[i][digit] * matrix_b[digit][j];
+            for (digit = 0; digit < n; digit++) {
+            	sum[i][j] = sum[i][j] + matrix_a[i][digit] * matrix_b[digit][j];
+            }    	
         }
     }
     for (i = 0; i < m; i++) {

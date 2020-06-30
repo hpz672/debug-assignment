@@ -1,12 +1,23 @@
 #include <stdio.h>
 #include <string.h>
-int main() {
-    char input[4];
+/*
+测试：答案：5 
+w
+-r
++r
++r
++x
++r
+-w
+*/
+int main() 
+{
+    char input[4] = {'\0'};
     int initial = 1;
     int counter = 0;
     int i, j;
     scanf("%s", input);
-    char operation[3];
+    char operation[3] = {'\0'};
      
     if (input[0] == 'r' && input[1] == 'w' && input[2] == 'x') {
         counter = 7;
@@ -23,24 +34,21 @@ int main() {
     } else {
         counter = 1;
     }
-    
     while (scanf("%s", operation) != EOF) {
-        if (operation[1] == '+' && operation[1] == 'r') {
+        if (operation[0] == '+' && operation[1] == 'r' && ((counter&4) == 0)) {
             counter += 4;
-        } else if (operation[1] == '+' && operation[1] == 'w') {
+        } else if (operation[0] == '+' && operation[1] == 'w' && ((counter&2) == 0)) {
             counter += 2;
-        } else if (operation[1] == '+' && operation[1] == 'x') {
+        } else if (operation[0] == '+' && operation[1] == 'x' && ((counter&1) == 0)) {
             counter += 1;   
-        } else if (operation[1] == '-' && operation[1] == 'r') {
+        } else if (operation[0] == '-' && operation[1] == 'r' && ((counter&4) == 4)) {
             counter -= 4; 
-        } else if (operation[1] == '-' && operation[1] == 'w') {
+        } else if (operation[0] == '-' && operation[1] == 'w' && ((counter&2) == 2)) {
             counter -= 2;
-        } else {
+        } else if (operation[0] == '-' && operation[1] == 'x' && ((counter&1) == 1)) {
             counter -= 1;
         }
     }
-    
     printf("%d", counter);
-      
     return 0;
 }
