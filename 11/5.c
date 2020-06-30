@@ -31,7 +31,7 @@ int main()
     }
     
     for (int i = 0; i < j; i++) {
-        arr[(i+1) % 32] = arr[(i+1) % 32] + (int)(str[i]);
+        arr[(i + 1) % 32] = arr[(i + 1) % 32] + (int)(str[i]);
     }
     
     for (int i = 0; i < 32; i++) {
