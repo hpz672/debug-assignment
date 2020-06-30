@@ -64,8 +64,8 @@ void count_off(Node *head, int n, int k, int m)
         } 
         printf("%d", temp->data);
         if(j != n - 1) {
-        	printf(" ");
-		}
+            printf(" ");
+        }
         flag->next = temp->next;
     	temp = temp->next;
         }
@@ -75,7 +75,7 @@ void count_off(Node *head, int n, int k, int m)
             printf("%d", i);
             if(i != n) {
             	printf(" ");
-			}
+            }
         }
     }
     return;
